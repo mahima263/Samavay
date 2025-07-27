@@ -21,7 +21,7 @@ body {
   
   /* Fixed Header */
   .custom-header {
-    background-color: #29667F!important; /* Your theme color */
+    background-color: #57b3d7!important; /* Your theme color */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
@@ -209,7 +209,7 @@ footer {
 
 /* Timer Section */
 .timerbody {
-    background-image: url("images/bgmain.jpeg");
+    background: linear-gradient(135deg, #AEE6F9 0%, #3BAFDA 100%);
     background-size: cover;
     background-position: center;
     color: white;
@@ -237,7 +237,7 @@ footer {
     text-align: center;
     position: relative;
     flex: 1 1 20%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -281,34 +281,36 @@ footer {
 
 /* Button Styling */
 .btn-custom {
-    background-color: #e74c3c;
+    background-color: #0E777E;  /* Your theme color */
     border: none;
     color: white;
     transition: background-color 0.3s ease;
 }
 .btn-custom:hover {
-    background:  linear-gradient(45deg, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #0E9AA7, #0072ff);
     color: white;
 }
+
 .btn-register-now {
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #0E9AA7, #0072ff);
     color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
     border: none;
-    border-radius: 10px;
-    padding: 15px 30px;
+    border-radius: 12px;
+    padding: 14px 28px;
     transition: all 0.4s ease;
-    animation: pulse 5s infinite;
-    box-shadow: 0 8px 20px rgba(65, 13, 176, 0.4);
+    animation: none; /* Removed pulse to reduce distraction */
+    box-shadow: 0 8px 18px rgba(0, 114, 255, 0.3);
     position: relative;
     overflow: hidden;
 }
 .btn-register-now:hover {
-    background: linear-gradient(45deg, #0072ff, #00c6ff);
-    box-shadow: 0 12px 30px rgba(0, 114, 255, 0.6);
-    transform: translateY(-4px);
+    background: linear-gradient(45deg, #0072ff, #0E9AA7);
+    box-shadow: 0 10px 28px rgba(0, 114, 255, 0.45);
+    transform: translateY(-3px);
 }
+
 .btn-register-now::before {
     content: '';
     position: absolute;
@@ -316,28 +318,21 @@ footer {
     left: -50%;
     width: 200%;
     height: 200%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     transition: opacity 0.4s ease;
     opacity: 0;
     border-radius: 50%;
     z-index: 0;
-    animation: glow 3s infinite alternate;
 }
-@keyframes glow {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
+
+.btn-register-now:hover::before {
+    opacity: 1;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #e74c3c;
-    border: 2px solid #e74c3c;
+    color: #0072ff;
+    border: 2px solid #0072ff;
     transition: all 0.3s ease;
 }
 .btn-secondary:hover {
@@ -607,36 +602,48 @@ section.py-5 {
     color: #0c3d57 !important;
 }
 .panel-box {
-    background-color: #fff;
-    border-left: 5px solid #0C3F54;
+    background-color: #ffffff;
+    border-left: 5px solid #57B3D7;  /* Bright blue left border */
     transition: box-shadow 0.3s ease;
     min-height: 220px;
+    border-radius: 10px;
+    padding: 20px;
 }
+
 .panel-box:hover {
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 28px rgba(87, 179, 215, 0.2); /* Light blue glow on hover */
 }
+
 .panel-box img {
     width: 65px;
     height: auto;
 }
+
 .panel-box h5 {
     font-size: 1.4rem;
     color: #0C3F54;
+    margin-top: 10px;
 }
+
 .panel-box p {
     font-size: 0.95rem;
-    margin-top: 5px;
+    margin-top: 8px;
+    color: #333;
 }
+
 .panel-badge {
-    background-color: #0C3F54;
+    background: linear-gradient(45deg, #57B3D7, #379EBD);  /* Gradient using your navbar blue */
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     padding: 10px 24px;
     border-radius: 30px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(87, 179, 215, 0.3);
+    display: inline-block;
+    margin-top: 15px;
 }
+
 
 /* accelerating */
 .track-card {
