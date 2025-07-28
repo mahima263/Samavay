@@ -341,14 +341,31 @@ footer {
 }
 
 .attend {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: url('images/whyattend bg.png') no-repeat center center;
+    background: url('Copy of DSC_5868.JPG') no-repeat center center;
     background-size: cover;
     color: white;
     min-height: 70vh;
+    z-index: 1;
+    overflow: hidden;
 }
+
+.attend::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(3, 35, 59, 0.708); /* blue transparent overlay */
+    z-index: 0;
+}
+
+.attend > * {
+    position: relative;
+    z-index: 1; /* make sure content is above the overlay */
+}
+
 .attendicon {
     font-size: 40px;
     margin-bottom: 15px;
@@ -545,7 +562,7 @@ section.py-5 {
     padding: 0;
 }
 .spotcontact-section {
-    background-image: url('images/spot bg.png');
+    background-image: url('audience (3).JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -555,9 +572,10 @@ section.py-5 {
     position: relative;
     z-index: 1;
 }
-.spotsection::before {
+
+.spotcontact-section::before {
     content: "";
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(29, 65, 104, 0.815); /* Semi-transparent Bootstrap blue */
     position: absolute;
     top: 0;
     left: 0;
@@ -565,6 +583,7 @@ section.py-5 {
     height: 100%;
     z-index: 0;
 }
+
 .spotsection .container {
     position: relative;
     z-index: 2;
@@ -644,7 +663,21 @@ section.py-5 {
     margin-top: 15px;
 }
 
-
+.panel-box {
+    background: #fff;
+    transition: transform 0.3s ease;
+  }
+  .panel-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  .text-primary {
+    color: #B04B3B; /* You can use your brand accent color */
+  }
+  .text-dark-blue {
+    color: #15406A; /* You can adjust this hex to match your theme's dark blue */
+  }
+  
 /* accelerating */
 .track-card {
     background-color: #f7fcfd;
@@ -673,3 +706,67 @@ section.py-5 {
     line-height: 1.6;
     margin: 0;
 }
+/* Thematic tracks */
+.thematic-section {
+    background-color: #f9f9f9;
+  }
+  
+  .focus-card {
+    border: 1px solid #004080;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  .focus-card h5 {
+    color: #004080;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+  
+  .focus-card p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hover Effects */
+  .focus-card:hover {
+    background-color: #e6f5f6;
+    border-color: #0a5e63;
+  }
+  
+  .focus-card:hover h5 {
+    color: #0b5073;
+  }
+  
+  .focus-card:hover p {
+    opacity: 1;
+    max-height: 200px;
+  }
+  /*contact*/
+  .contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #B04B3B; /* Accent line */
+    text-align: center;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-card a:hover {
+    color: #B04B3B !important;
+    text-decoration: underline;
+  }
+  
