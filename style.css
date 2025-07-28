@@ -357,7 +357,7 @@ footer {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(3, 35, 59, 0.708); /* blue transparent overlay */
+    background: rgba(3, 35, 59, 0.801); /* blue transparent overlay */
     z-index: 0;
 }
 
@@ -707,52 +707,75 @@ section.py-5 {
     margin: 0;
 }
 /* Thematic tracks */
-.thematic-section {
-    background-color: #f9f9f9;
-  }
-  
-  .focus-card {
-    border: 1px solid #004080;
-    padding: 20px;
+.focus-card {
+    position: relative;
+    background-color:#57b3d7;
     border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    height: 100%;
-  }
-  
-  .focus-card h5 {
-    color: #004080;
-    font-weight: 600;
-    margin-bottom: 10px;
-    transition: color 0.3s;
-  }
-  
-  .focus-card p {
-    margin: 0;
-    color: #555;
-    font-size: 0.95rem;
-    opacity: 0;
-    max-height: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
     overflow: hidden;
-    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(11, 63, 119, 0.792);
   }
   
-  /* Hover Effects */
   .focus-card:hover {
-    background-color: #e6f5f6;
-    border-color: #0a5e63;
+    transform: translateY(-5px);
   }
   
-  .focus-card:hover h5 {
-    color: #0b5073;
+  /* Title always visible, centered */
+  .focus-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+    margin: 0;
   }
   
-  .focus-card:hover p {
+  /* Dark overlay on hover */
+  .focus-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 1.75);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+  }
+  .focus-card:hover h3 {
+    opacity: 0;
+  }
+  /* Description inside overlay */
+  .focus-card .desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    font-size: 1rem;
+  }
+  
+  /* Show overlay and description on hover */
+  .focus-card:hover::before {
     opacity: 1;
-    max-height: 200px;
   }
+  
+  .focus-card:hover .desc {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
   /*contact*/
   .contact-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
