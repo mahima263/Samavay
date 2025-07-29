@@ -711,7 +711,7 @@ section.py-5 {
   }
   
 .track-card {
-    background-color: #f7fcfd;
+    background-color: #ffffff;
     border-radius: 16px;
     padding: 40px 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -787,7 +787,7 @@ section.py-5 {
     text-align: center;
     overflow: hidden;
     border-top: 4px solid var(--blue-main);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
@@ -814,7 +814,7 @@ section.py-5 {
   
   .card-content h5 {
     font-weight: 700;
-    font-size: 2rem; /* Increased heading size */
+    font-size: 1.8rem; /* Increased heading size */
     color: #222;
     margin: 0;
   }
@@ -853,7 +853,29 @@ section.py-5 {
     object-fit: contain;
     margin-bottom: 0.5rem;
   }
+  .thematic-img-div {
+    background-image: url('images/samanvay-banner.jpeg');
+    background-size: contain;        /* ✅ Show full image */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
   
+  @media (max-width: 991.98px) {
+    .thematic-img-div {
+      height: 300px; /* adjust as needed */
+    }
+  }
+  
+  
+  /* Fix the height issue on small screens */
+  @media (max-width: 991.98px) {
+    .img-fluid.h-100 {
+      height: auto !important;
+    }
+  }
   
   /*contact*/
   .contact-card {
