@@ -737,7 +737,7 @@ section.py-5 {
     position: relative;
     background: white;
     border-radius: 16px;
-    height: 260px;
+    height: 230px;
     text-align: center;
     overflow: hidden;
     border-top: 4px solid var(--blue-main);
@@ -829,27 +829,50 @@ section.py-5 {
     flex-wrap: wrap;
   }
   
-  /* Reduce padding and height for smaller laptop screens (max 1400px) */
-  @media (max-width: 1400px) {
+ /* ===================================== */
+/* 🔧 RESPONSIVE FIX for Smaller Screens */
+/* ===================================== */
+
+@media (max-width: 1400px) {
     .thematic-section .py-5 {
       padding-top: 2rem !important;
       padding-bottom: 2rem !important;
     }
   
     .card-hover {
-      height: 200px; /* Reduced height for small laptops */
+      height: 180px; /* smaller card height */
+    }
+  
+    .card-content {
+      padding: 0.5rem;
+    }
+  
+    .card-content .icon img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.3rem;
     }
   
     .card-content h5 {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      margin-bottom: 0;
     }
   
     .card-overlay p {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      padding: 0;
+    }
+  
+    .hover-grid {
+      gap: 1rem;
+    }
+  
+    h3.text-blue {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
   
-  /* Optional: Adjust padding and layout on mobile too */
   @media (max-width: 991.98px) {
     .card-hover {
       height: auto;
