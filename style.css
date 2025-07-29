@@ -803,6 +803,26 @@ section.py-5 {
     font-size: 1.2rem;
     line-height: 1.5;
   }
+  /* Ensures the image fits the left side properly on all screens */
+.img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* ✅ shows full image without cutting */
+    display: block;
+  }
+  
+  @media (max-width: 991.98px) {
+    .img-container img {
+      height: 300px;
+      object-fit: cover; /* mobile pe thoda zoomed feel dena ho to */
+    }
+  }
   
   
   /*contact*/
