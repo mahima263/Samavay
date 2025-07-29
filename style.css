@@ -823,6 +823,46 @@ section.py-5 {
       object-fit: cover; /* mobile pe thoda zoomed feel dena ho to */
     }
   }
+  /* Maintain equal height for both sides using Flexbox */
+.row.align-items-stretch {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Reduce padding and height for smaller laptop screens (max 1400px) */
+  @media (max-width: 1400px) {
+    .thematic-section .py-5 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+  
+    .card-hover {
+      height: 200px; /* Reduced height for small laptops */
+    }
+  
+    .card-content h5 {
+      font-size: 1.2rem;
+    }
+  
+    .card-overlay p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Optional: Adjust padding and layout on mobile too */
+  @media (max-width: 991.98px) {
+    .card-hover {
+      height: auto;
+    }
+  
+    .hover-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hover-grid .card-hover:first-child {
+      grid-column: auto;
+    }
+  }
   
   
   /*contact*/
