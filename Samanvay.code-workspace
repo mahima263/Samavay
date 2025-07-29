@@ -1,10 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "Samanvay",
 			"path": "."
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "IITK SAMANVAY 5"
+		"liveServer.settings.multiRootWorkspaceName": "Samanvay"
 	}
 }
