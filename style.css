@@ -119,6 +119,7 @@ body {
     height: 85vh;
     display: block;
     object-fit: cover;
+    padding-top: 20px;
   }
 
   /* Optional: if your banner is too tall or blurry on small screens */
@@ -127,6 +128,7 @@ body {
 @media (max-width: 575.98px) {
   .banner-section img {
     height: 55vh;
+    padding-top: 20px;
   }
 }
 
@@ -134,6 +136,7 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .banner-section img {
     height: 60vh;
+    padding-top: 20x;
   }
 }
 
