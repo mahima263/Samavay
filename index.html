@@ -9,6 +9,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -44,7 +46,7 @@
             <li class="nav-item">
               <a class="nav-link custom-nav-link" href="#">Highlights</a>
             </li>
-           
+
             <li class="nav-item">
               <a class="nav-link custom-nav-link" href="#">Contact Us</a>
             </li>
@@ -61,17 +63,29 @@
 
 
 
-  <!-- Main Content -->
+  <!-- Main Content----------------------Banner -->
   <main class="pt-5 mt-5">
     <section class="banner-section">
-      <img src="Website Banner-02.jpg" class="img-fluid w-100" alt="Samanvay 2025 Banner">
+      <picture>
+        <!-- Mobile banner -->
+        <source srcset="mobile-banner.webp" media="(max-width: 767px)">
+        <!-- Desktop banner -->
+        <source srcset="banner.jpeg" media="(min-width: 768px)">
+        <!-- Fallback image -->
+        <img src="banner.jpeg" class="img-fluid w-100" alt="Samanvay 2025 Banner">
+      </picture>
     </section>
+    
+    
+    
+    
+    
 
-
+    <!--------------_About Samanvay-->
 
     <section class="py-5 bg-light" id="about">
       <div class="container">
-      
+
 
         <!-- Content -->
         <div class="row align-items-center">
@@ -107,94 +121,7 @@
 
 
 
-    <section class="timerbody mb-4">
-      <div class="container mt-3">
-        <h1 class="text-center mb-5">Countdown to IITK Samanvay</h1>
-
-        <!-- Countdown Timer -->
-        <div class="row justify-content-center" id="countdown-timer">
-          <div class="col-md-2 col-sm-3 col-6">
-            <div class="countdown-box">
-              <h2 id="days">00</h2>
-              <p>DAYS</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-3 col-6">
-            <div class="countdown-box">
-              <h2 id="hours">00</h2>
-              <p>HOURS</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-3 col-6">
-            <div class="countdown-box">
-              <h2 id="minutes">00</h2>
-              <p>MINUTES</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-3 col-6">
-            <div class="countdown-box">
-              <h2 id="seconds">00</h2>
-              <p>SECONDS</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Register Button -->
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-4 mb-4">
-            <a href=" https://zfrmz.in/0rb8QnYvfzhguWQmcYiv" target="_blank"
-              class="btn btn-primary w-100 text-white text-decoration-none">
-              REGISTER NOW
-            </a>
-          </div>
-        </div>
-
-        <!-- Agenda & Brochure Buttons -->
-        <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-6 mb-3">
-            <a href="MTM- IITK Samanvay_2025_Final_WD.pdf" target="_blank" class="btn btn-secondary w-100">AGENDA</a>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <a href="samanvay_report__2025_1.pdf" target="_blank" class="btn btn-secondary w-100">REPORT 2024</a>
-          </div>
-        </div>
-        
-        
-      </div>
-    </section>
-
-    <!-- Countdown to 2nd September 2025, 6:00 AM -->
-    <script>
-      // Set fixed countdown target (no localStorage logic)
-      const targetDate = new Date("2025-09-02T06:00:00+05:30").getTime();
-
-      const countdownInterval = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance <= 0) {
-          clearInterval(countdownInterval);
-          document.getElementById("countdown-timer").innerHTML = `
-        <div class="col-12 text-center">
-          <h2 class="text-success fw-bold display-6">Samanvay 2025 Has Begun!</h2>
-        </div>
-      `;
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").innerText = days.toString().padStart(2, "0");
-        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
-        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
-        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
-      }, 1000);
-    </script>
-
-
+    <!-----------------------------why you should attend-->
 
 
     <section class="attend py-4">
@@ -254,144 +181,267 @@
         </div>
       </div>
     </section>
+    <!-----------------------------Timer-->
+    <section class="timerbody mb-4">
+      <div class="container mt-3">
+        <h1 class="text-center mb-5">Countdown to IITK Samanvay</h1>
 
-    <section class="pannel py-5" id="panel-discussions">
+        <!-- Countdown Timer -->
+        <div class="row justify-content-center" id="countdown-timer">
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="countdown-box">
+              <h2 id="days">00</h2>
+              <p>DAYS</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="countdown-box">
+              <h2 id="hours">00</h2>
+              <p>HOURS</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="countdown-box">
+              <h2 id="minutes">00</h2>
+              <p>MINUTES</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-3 col-6">
+            <div class="countdown-box">
+              <h2 id="seconds">00</h2>
+              <p>SECONDS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4 mb-4">
+            <a href=" https://zfrmz.in/0rb8QnYvfzhguWQmcYiv" target="_blank"
+              class="btn btn-primary w-100 text-white text-decoration-none">
+              REGISTER NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Agenda & Brochure Buttons -->
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="MTM- IITK Samanvay_2025_Final_WD.pdf" target="_blank" class="btn btn-secondary w-100">AGENDA</a>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <a href="samanvay_report__2025_1.pdf" target="_blank" class="btn btn-secondary w-100">REPORT 2024</a>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Countdown to 2nd September 2025, 6:00 AM -->
+    <script>
+      // Set fixed countdown target (no localStorage logic)
+      const targetDate = new Date("2025-09-02T06:00:00+05:30").getTime();
+
+      const countdownInterval = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown-timer").innerHTML = `
+    <div class="col-12 text-center">
+      <h2 class="text-success fw-bold display-6">Samanvay 2025 Has Begun!</h2>
+    </div>
+  `;
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days.toString().padStart(2, "0");
+        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+      }, 1000);
+    </script>
+
+
+    <!---------------------------------Panel discussion--------->
+
+    <section class="card-section">
       <div class="container">
-        <!-- Section Heading -->
-        <div class="row mb-5">
-          <div class="col text-center">
-            <h2 class="section-title fw-bold">Panel Discussions</h2>
-          </div>
-        </div>
+        <h2 class="section-title mb-4">Pannel Discussions</h2>
+        <div class="row justify-content-center">
 
-        <!-- Panels -->
-        <div class="row g-4">
-          <!-- Panel 1 -->
-          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-            <div class="panel-box h-100 p-4 text-center rounded shadow-sm bg-white hover-shadow transition">
-              <h6 class="text-uppercase mb-3 fw-semibold text-dark-blue">Panel Discussion 1</h6>
-              <img src="panelicon1.png" alt="Panel 1" class="mb-4" style="max-height: 80px;">
-              <h5 class="fw-bold mb-2">Co-Inventing the Future</h5>
-              <p class="text-muted small mb-0">Translational Research in AI, Sustainability & Cybersecurity</p>
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-box border-red">
+              <img src="Ai.jpeg" class="card-img-top" alt="Residential Construction">
+              <div class="icon-wrapper">
+                <i class="fas fa-globe" style="color: #fff; font-size: 28px;"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Co-Inventing the Future</h5>
+                <p class="card-text" style="margin-bottom: 30px;">
+                  Translational Research in AI, Sustainability & Cybersecurity
+                </p>
+                <a href="#" class="card-link">Pannel Discussion 1</a>
+              </div>
             </div>
           </div>
 
-          <!-- Panel 2 -->
-          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="panel-box h-100 p-4 text-center rounded shadow-sm bg-white hover-shadow transition">
-              <h6 class="text-uppercase mb-3 fw-semibold text-dark-blue">Panel Discussion 2</h6>
-              <img src="panelicon2.png" alt="Panel 2" class="mb-4" style="max-height: 80px;">
-              <h5 class="fw-bold mb-2">Purpose-Driven Technology</h5>
-              <p class="text-muted small mb-0">Using CSR to Fuel Innovation in AI, Sustainability & Cybersecurity</p>
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-box border-red">
+              <img src="Sustainability.jpeg" class="card-img-top" alt="Commercial Construction">
+              <div class="icon-wrapper">
+                <i class="fas fa-globe" style="color: #fff; font-size: 28px;"></i>
+              </div>
+
+
+              <div class="card-body">
+                <h5 class="card-title">Purpose-Driven Technology</h5>
+                <p class="card-text">Using CSR to Fuel Innovation in AI, Sustainability & Cybersecurity</p>
+                <a href="#" class="card-link">Pannel Discussion 2</a>
+              </div>
             </div>
           </div>
 
-          <!-- Panel 3 -->
-          <div class="col-12 col-md-6 col-lg-4 mx-md-auto" data-aos="fade-up" data-aos-duration="1000"
-            data-aos-delay="400">
-            <div class="panel-box h-100 p-4 text-center rounded shadow-sm bg-white hover-shadow transition">
-              <h6 class="text-uppercase mb-3 fw-semibold text-dark-blue">Panel Discussion 3</h6>
-              <img src="panelicon3.png" alt="Panel 3" class="mb-4" style="max-height: 80px;">
-              <h5 class="fw-bold mb-2">Crafting the Future</h5>
-              <p class="text-muted small mb-0">How MSMEs and academia can shape a Self-Reliant India</p>
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-box border-red">
+              <img src="Cybersecurity.jpeg" class="card-img-top" alt="Renovations and Remodeling">
+              <div class="icon-wrapper">
+                <i class="fas fa-globe" style="color: #fff; font-size: 28px;"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Crafting the Future
+                </h5>
+                <p class="card-text" style="margin-bottom: 30px;;">How MSMEs and academia can shape a Self-Reliant India
+                </p>
+                <a href="#" class="card-link">Pannel Discussion 3</a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+    <!-----------------thematic Focus Areas-->
+    <section id="featured-destinations" class="featured-destinations section">
+
+      <!-- Section Title -->
 
 
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
 
-    <section class="py-5 thematic-section">
-      <div class="container-fluid">
-        <div class="row g-0 align-items-stretch">
-    
-          <!-- Left Image using responsive background DIV -->
-          <div class="col-lg-6 px-0" data-aos="fade-right" data-aos-duration="1000">
-            <div class="img-container">
-              <img src="focus areas.jpeg" alt="Focus Areas" class="img-fluid w-100" />
-            </div>
-          </div>
-    
-          <!-- Right Content -->
-          <div class="col-lg-6 px-0 py-5 bg-light d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-duration="1000">
-            <h3 class="mb-4 text-center fw-bold text-blue px-3">
-              Catalyzing Innovation Across Transformative Domains
-            </h3>
-    
-            <div class="hover-grid px-4">
-              <!-- Card 1 -->
-              <div class="card-hover">
-                <div class="card-content">
-                  <div class="icon">
-                    <img src="artificial-intelligence.png" alt="AI Icon" />
-                  </div>
-                  <h5>Artificial Intelligence</h5>
-                </div>
-                <div class="card-overlay">
-                  <p>Driving smarter systems, automation, and predictive analytics.</p>
-                </div>
-              </div>
-    
-              <!-- Card 2 -->
-              <div class="card-hover">
-                <div class="card-content">
-                  <div class="icon">
-                    <img src="sustainable-business.png" alt="Sustainability Icon" />
-                  </div>
-                  <h5>Sustainability</h5>
-                </div>
-                <div class="card-overlay">
-                  <p>Innovating for a greener, inclusive & resilient future.</p>
-                </div>
-              </div>
-    
-              <!-- Card 3 -->
-              <div class="card-hover">
-                <div class="card-content">
-                  <div class="icon">
-                    <img src="cyber-security.png" alt="Cybersecurity Icon" />
-                  </div>
-                  <h5>Cybersecurity</h5>
-                </div>
-                <div class="card-overlay">
-                  <p>Safeguarding infrastructure in a data-driven digital world.</p>
+          <!-- Left Highlight Card -->
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="featured-destination">
+              <div class="destination-overlay">
+                <img src="focus areas.jpeg" alt="IITK 1986 Reunion" class="img-fluid">
+                <div class="destination-info">
+
+
+                  <a href="#agenda" class="explore-btn">
+                    <span>View Agenda</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-    
+
+          <!-- Right Compact Cards -->
+          <div class="col-lg-6" >
+            <div class="row g-3">
+
+              <!-- Artificial Intelligence -->
+              <div class="col-12" data-aos="fade-left" data-aos-delay="300">
+                <div class="compact-destination" >
+                  <div class="destination-image">
+                    <img src="focus areas.jpeg" alt="Schedule" class="img-fluid">
+                  </div>
+                  <div class="destination-details">
+                    <h3>Artificial Intelligence</h3>
+
+                    <p class="brief">Driving smarter systems, automation, and predictive analytics.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Sustainability -->
+              <div class="col-12" data-aos="fade-left" data-aos-delay="400">
+                <div class="compact-destination">
+                  <div class="destination-image">
+                    <img src="focus areas.jpeg" alt="Travel Info" class="img-fluid">
+                  </div>
+                  <div class="destination-details">
+                    <h3>Sustainability</h3>
+
+                    <p class="brief"> Innovating for a greener, inclusive & resilient future.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!--Cybersecurity -->
+              <div class="col-12" data-aos="fade-left" data-aos-delay="500">
+                <div class="compact-destination">
+                  <div class="destination-image">
+                    <img src="focus areas.jpeg" alt="Legacy Benchmark" class="img-fluid">
+                  </div>
+                  <div class="destination-details">
+                    <h3>Cybersecurityy</h3>
+                    <p class="brief">Safeguarding infrastructure in a data-driven digital world.</p>
+                   
+                    
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-    
-
-    
-    
-    
-    
+ 
 
 
 
-         <div class="venue bg-light container-fluid py-5">
-          <div class="row align-items-center">
-            <!-- Left Column -->
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-              <h1 class="headingvenue">IIT Kanpur Campus</h1>
-              <div class="underline"></div>
-              <p class="lead m-4">
-                The event will take place at the vibrant IIT Kanpur campus, a hub of innovation and excellence.
-                Experience the inspiring environment where academic brilliance meets cutting-edge research.
-              </p>
-            </div>
-        
-            <!-- Right Column -->
-            <div class="col-md-6 p-0" data-aos="fade-left" data-aos-duration="1000">
-              <img src="Rectangle 59.png" alt="IITK Campus" class="img-fluid">
-            </div>
-          </div>
+
+    <!--------------------IITKanpur campus-->
+
+
+
+
+    <div class="venue bg-light container-fluid py-5">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+          <h1 class="headingvenue">IIT Kanpur Campus</h1>
+          <div class="underline"></div>
+          <p class="lead m-4">
+            The event will take place at the vibrant IIT Kanpur campus, a hub of innovation and excellence.
+            Experience the inspiring environment where academic brilliance meets cutting-edge research.
+          </p>
         </div>
-        
+
+        <!-- Right Column -->
+        <div class="col-md-6 p-0" data-aos="fade-left" data-aos-duration="1000">
+          <img src="Rectangle 59.png" alt="IITK Campus" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
 
 
     <section class="spotcontact-section text-white text-center py-5" style="background-color: #0E777E;">

@@ -116,19 +116,54 @@ body {
   /* Banner Styling */
   .banner-section img {
     width: 100%;
-    height: auto;
+    height: 85vh;
     display: block;
     object-fit: cover;
   }
-  
+
   /* Optional: if your banner is too tall or blurry on small screens */
-  @media (max-width: 767px) {
-    .banner-section img {
-      object-fit: contain;
-      height: auto;
-    }
-  }
   
+  /* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .banner-section img {
+    height: 55vh;
+  }
+}
+
+/* Small devices (phones landscape and small tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .banner-section img {
+    height: 60vh;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banner-section img {
+    height: 70vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .banner-section img {
+    height: 80vh;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+  .banner-section img {
+    height: 85vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  .banner-section img {
+    object-fit: contain;
+    height: auto;
+    max-height: 85vh;
+  }
+}
   
 .keynote-section h2, .keynote-section h3, .cta-section h2, .contact-section h2 {
     color: #0C3F54;
@@ -365,7 +400,7 @@ footer {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: url('Copy of DSC_5868.JPG') no-repeat center center;
+    background: url('Copy of DSC_5868.JPG') no-repeat center center fixed;
     background-size: cover;
     color: white;
     min-height: 70vh;
@@ -640,252 +675,90 @@ section.py-5 {
     letter-spacing: 1px;
     color: #0c3d57 !important;
 }
-.panel-box {
-    background-color: #ffffff;
-    border-left: 5px solid #57B3D7;  /* Bright blue left border */
-    transition: box-shadow 0.3s ease;
-    min-height: 220px;
-    border-radius: 10px;
-    padding: 20px;
-}
 
-.panel-box:hover {
-    box-shadow: 0 12px 28px rgba(87, 179, 215, 0.2); /* Light blue glow on hover */
-}
+  /*-----------Pannel discussion-------------*/
 
-.panel-box img {
-    width: 65px;
-    height: auto;
-}
-
-.panel-box h5 {
-    font-size: 1.4rem;
-    color: #0C3F54;
-    margin-top: 10px;
-}
-
-.panel-box p {
-    font-size: 0.95rem;
-    margin-top: 8px;
-    color: #333;
-}
-
-.panel-badge {
-    background: linear-gradient(45deg, #57B3D7, #379EBD);  /* Gradient using your navbar blue */
-    color: #fff;
-    font-size: 1.05rem;
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 12px rgba(87, 179, 215, 0.3);
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.panel-box {
+  .card-section {
+    padding: 50px 0;
+  }
+  
+  .card-box {
+    position: relative;
     background: #fff;
-    transition: transform 0.3s ease;
-  }
-  .panel-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-  .text-primary {
-    color: #B04B3B; /* You can use your brand accent color */
-  }
-  .text-dark-blue {
-    color: #15406A; /* You can adjust this hex to match your theme's dark blue */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    text-align: left;
+    
   }
   
-/* accelerating */
-:root {
-    --blue-main: #0E4C92;
-    --blue-light: #eaf3fc;
-    --blue-hover: #0b3a6f;
-    --icon-bg: #d8e9fa;
+  .card-box:hover {
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
   }
   
-  .text-blue {
-    color: var(--blue-main);
-  }
-  
-  /* Image sizing */
-  .object-fit-cover {
+  .card-img-top {
+    width: 100%;
+    height: 160px;
     object-fit: cover;
   }
   
-  /* Grid Layout */
-  .hover-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .hover-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .hover-grid .card-hover:first-child {
-      grid-column: span 2;
-    }
-  }
-  
-  /* Card Styling */
-  .card-hover {
-    position: relative;
-    background: white;
-    border-radius: 16px;
-    height: 230px;
-    text-align: center;
-    overflow: hidden;
-    border-top: 4px solid var(--blue-main);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .card-hover:hover {
-    transform: translateY(-6px);
-  }
-  
-  .card-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: #192b6b;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-  }
-  
-  .card-content .icon img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-  }
-  
-  .card-content h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #222;
-    margin: 0;
-  }
-  
-  /* Hover Overlay */
-  .card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(14, 76, 146, 0.9);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 3;
+    top: 130px;
+    left: 20px;
+    border: 4px solid #fff;
   }
   
-  .card-hover:hover .card-overlay {
-    opacity: 1;
+  .icon-wrapper i {
+    color: #fff!important;        /* white icon color */
+    font-size: 44px;    /* adjust size if needed */
   }
   
-  .card-overlay p {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  /* Ensures the image fits the left side properly on all screens */
-.img-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
+  
+  .card-body {
+    padding: 50px 20px 20px 20px;
   }
   
-  .img-container img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* ✅ shows full image without cutting */
-    display: block;
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b2559;
   }
   
-  @media (max-width: 991.98px) {
-    .img-container img {
-      height: 300px;
-      object-fit: cover; /* mobile pe thoda zoomed feel dena ho to */
-    }
-  }
-  /* Maintain equal height for both sides using Flexbox */
-.row.align-items-stretch {
-    display: flex;
-    flex-wrap: wrap;
+  .card-text {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
   }
   
- /* ===================================== */
-/* 🔧 RESPONSIVE FIX for Smaller Screens */
-/* ===================================== */
-
-@media (max-width: 1400px) {
-    .thematic-section .py-5 {
-      padding-top: 2rem !important;
-      padding-bottom: 2rem !important;
-    }
-  
-    .card-hover {
-      height: 180px; /* smaller card height */
-    }
-  
-    .card-content {
-      padding: 0.5rem;
-    }
-  
-    .card-content .icon img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 0.3rem;
-    }
-  
-    .card-content h5 {
-      font-size: 1rem;
-      margin-bottom: 0;
-    }
-  
-    .card-overlay p {
-      font-size: 0.95rem;
-      padding: 0;
-    }
-  
-    .hover-grid {
-      gap: 1rem;
-    }
-  
-    h3.text-blue {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
+  .card-link {
+    font-weight: 600;
+    text-decoration: none;
+    color: #0b2559;
+    transition: 0.2s;
   }
   
-  @media (max-width: 991.98px) {
-    .card-hover {
-      height: auto;
-    }
-  
-    .hover-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .hover-grid .card-hover:first-child {
-      grid-column: auto;
-    }
+  .card-link:hover {
+    text-decoration: underline;
   }
+  
+  .text-red {
+    color: #000000 !important;
+  }
+  
+  .border-red {
+    border-bottom: 4px solid #2b3b73;
+  }
+/*end*/  
+/* accelerating */
   
   
   /*contact*/
@@ -904,4 +777,370 @@ section.py-5 {
     color: #B04B3B !important;
     text-decoration: underline;
   }
+  .featured-destinations .featured-destination {
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
   
+  .featured-destinations .featured-destination:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  .featured-destinations .featured-destination .destination-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .featured-destinations .featured-destination .destination-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .featured-destinations .featured-destination .destination-overlay:hover img {
+    transform: scale(1.08);
+  }
+  
+  .featured-destinations .featured-destination .destination-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+  }
+  
+  .featured-destinations .featured-destination .destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    z-index: 2;
+    color: white;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .destination-tag {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .location {
+    font-size: 16px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .location i {
+    color: var(--accent-color);
+    font-size: 18px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .destination-meta {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .destination-meta .tours-count,
+  .featured-destinations .featured-destination .destination-info .destination-meta .rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .destination-meta .tours-count i,
+  .featured-destinations .featured-destination .destination-info .destination-meta .rating i {
+    color: var(--accent-color);
+  }
+  
+  .featured-destinations .featured-destination .destination-info .price-info {
+    margin-bottom: 25px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .price-info .starting-from {
+    display: block;
+    font-size: 13px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .price-info .amount {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-color);
+  }
+  
+  .featured-destinations .featured-destination .destination-info .explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .featured-destinations .featured-destination .destination-info .explore-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: translateX(5px);
+  }
+  
+  .featured-destinations .featured-destination .destination-info .explore-btn:hover i {
+    transform: translateX(3px);
+  }
+  
+  .featured-destinations .featured-destination .destination-info .explore-btn i {
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-destinations .compact-destination {
+    background: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 180px;
+  }
+  
+  .featured-destinations .compact-destination:hover {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    transform: translateX(8px);
+  }
+  
+  .featured-destinations .compact-destination .destination-image {
+    flex-shrink: 0;
+    width: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .featured-destinations .compact-destination .destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-destinations .compact-destination .destination-image .badge-offer {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .featured-destinations .compact-destination .destination-image .badge-offer.limited {
+    background: linear-gradient(135deg, #ffd700, #ffb347);
+    color: #333;
+  }
+  
+  .featured-destinations .compact-destination .destination-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .featured-destinations .compact-destination .destination-details h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #103379;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .location {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .location i {
+    color: var(--accent-color);
+    font-size: 12px;
+  }
+ 
+  
+
+  
+  .featured-destinations .compact-destination .destination-details .brief {
+    font-size: 23px;
+    line-height: 1.4;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .stats-row .tour-count,
+  .featured-destinations .compact-destination .destination-details .stats-row .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  }
+  
+  .featured-destinations .compact-destination .destination-details .stats-row .tour-count i,
+  .featured-destinations .compact-destination .destination-details .stats-row .rating i {
+    color: var(--accent-color);
+  }
+  
+  .featured-destinations .compact-destination .destination-details .stats-row .rating i {
+    color: #ffc107;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .stats-row .price {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 14px;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .quick-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .quick-link:hover {
+    color: color-mix(in srgb, var(--accent-color), black 15%);
+    gap: 8px;
+  }
+  
+  .featured-destinations .compact-destination .destination-details .quick-link i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-destinations .compact-destination:hover .destination-image img {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 992px) {
+    .featured-destinations .featured-destination {
+      height: 500px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info {
+      padding: 30px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info h3 {
+      font-size: 28px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info .price-info .amount {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .featured-destinations .featured-destination {
+      height: 450px;
+      margin-bottom: 30px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info {
+      padding: 25px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info h3 {
+      font-size: 24px;
+    }
+  
+    .featured-destinations .featured-destination .destination-info .destination-meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .featured-destinations .compact-destination {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .featured-destinations .compact-destination .destination-image {
+      width: 100%;
+      height: 160px;
+    }
+  
+    .featured-destinations .compact-destination .destination-details {
+      padding: 20px;
+    }
+  
+    .featured-destinations .compact-destination .destination-details .stats-row {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
