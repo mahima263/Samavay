@@ -119,7 +119,7 @@ body {
     height: 85vh;
     display: block;
     object-fit: cover;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   /* Optional: if your banner is too tall or blurry on small screens */
